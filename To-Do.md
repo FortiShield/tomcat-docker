@@ -1,20 +1,24 @@
-```mermaid
-graph TD;
-    A[my-tomcat-app] --> B[app]
-    A --> C[db]
-    A --> D[docker-compose.yml]
-    A --> E[README.md]
-    A --> F[.env]
+my-tomcat-app/
+│
+├── app/
+│   ├── Dockerfile                # Dockerfile for the Java application
+│   ├── your-app.jar              # Your existing JAR file
+│   ├── mysql-connector-java.jar   # MySQL JDBC driver
+│   └── src/                      # Optional: Source code directory (if needed)
+│       ├── main/
+│       │   └── java/
+│       │       └── your/
+│       │           └── package/
+│       │               └── MainClass.java # Main class of your application
+│       └── resources/            # Optional: Resources (e.g., configuration files)
+│
+├── db/
+│   ├── init.sql                  # Optional: SQL script to initialize the database
+│
+├── docker-compose.yml            # Docker Compose configuration
+├── README.md                     # Documentation about the project
+└── .env                          # Environment variables file (optional)
 
-    B --> B1[Dockerfile]
-    B --> B2[your-app.jar]
-    B --> B3[mysql-connector-java.jar]
-    B --> B4[src]
-    B4 --> B4a[main]
-    B4a --> B4a1[java]
-    B4a1 --> B4a1a[your]
-    B4a1a --> B4a1a1[package]
-    B4a1a1 --> B4a1a1a[MainClass.java]
-    B --> B5[resources]
+--- 
 
-    C --> C1[init.sql]
+This format is clear and easy to understand for anyone looking at your project documentation!
